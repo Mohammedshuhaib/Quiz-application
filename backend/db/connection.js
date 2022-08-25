@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 mongoose
-  .connect('mongodb://127.0.0.1:27017/userManagement', { useNewUrlParser: true })
+  .connect('mongodb://127.0.0.1:27017/BigoQuiz', { useNewUrlParser: true })
   .catch((e) => {
     console.log('connection error', e.message)
   })

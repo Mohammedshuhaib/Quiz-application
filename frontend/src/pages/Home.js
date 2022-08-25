@@ -1,23 +1,22 @@
 import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
 import React, { useEffect } from "react";
 import Explanation from "../components/explanation/Explanation";
 import Main from "../components/main/Main";
 import Pending from "../components/pending/Pending";
 import Questions from '../components/question/Questions'
+import{ toast } from 'react-toastify'
+import {data, reset} from '../features/dataSlice'
 function Home() {
+  const dispatch = useDispatch()
+
+  const {question, isLoading, isError, isSuccess, message} =useSelector((state) => state.quiz)
     useEffect(() => {
         ( async function getQuestion(){
-            try{
-                let response = await axios({
-                    url:'http://localhost:/getData',
-                    method:'get'
-                })
-                console.log(response)
-            }catch(err) {
-                console.log(err)
-            }
-            
+           dispatch(data())
           })()
+
+          console.log(question)
     },[])
   return (
     <div>

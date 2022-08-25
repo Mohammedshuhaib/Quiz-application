@@ -1,11 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "./Main.scss";
 function Main() {
+let {question} = useSelector((state) => state.quiz)
+
   return (
     <div className="mainContainer">
       <div>
         <div className="containers">
-          <p>120 m</p>
+          <p>{question}</p>
         </div>
         <div className="containers">
           <p>120 m</p>

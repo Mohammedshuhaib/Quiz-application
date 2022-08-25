@@ -1,0 +1,27 @@
+.expContainer {
+    margin-top: 20px;
+    border-radius: 15px;
+    margin-left: 10px;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,0.47);
+    box-shadow: 2px 4px 10px 1px rgba(161, 145, 145, 0.47);
+
+    .header {
+        margin-left: 8px;
+        margin-bottom: 0px;
+        p{
+            font-size: 18px;
+            font-weight: 500;
+        }
+      }
+    
+      .body {
+        margin-left: 8px;
+        margin-top: 0px;
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow: hidden;
+        p{
+            font-size: 15px;
+        }
+      }
+}

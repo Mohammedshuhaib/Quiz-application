@@ -1,6 +1,7 @@
 import React from 'react'
 import './Qustions.scss'
 function Questions() {
+
   return (
     <div className='questionContainer'>
         <div className="header">

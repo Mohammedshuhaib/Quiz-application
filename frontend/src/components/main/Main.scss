@@ -1,9 +1,46 @@
 .mainContainer {
-    margin-left: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  
+  .containers {
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
 
-    .containers {
-        -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,0.47);
-        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
-        height: 30px;
+    &:hover {
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(115, 102, 102, 0.47);
+      }
+  }
+
+  .buttonContaier {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    .prevButton,
+    .nextButton {
+      margin: 0 50px 0 50px;
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(202, 194, 194, 0.47);
+      width: 100px;
+      border-radius: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      cursor: pointer;
+
+      &:hover {
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(115, 102, 102, 0.47);
+      }
+
     }
+  }
 }

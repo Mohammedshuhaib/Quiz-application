@@ -1,0 +1,30 @@
+.questionContainer {
+  border-radius: 15px;
+  border-style: solid;
+  border-width: thin;
+  border-color: rgb(5, 29, 105);
+  margin-left: 10px;
+  width: 1000px;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+
+  .header {
+    margin-left: 8px;
+    margin-bottom: 0px;
+    p{
+        font-size: 18px;
+        font-weight: 500;
+    }
+  }
+
+  .body {
+    margin-left: 8px;
+    margin-top: 0px;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
+    p{
+        font-size: 15px;
+    }
+  }
+}

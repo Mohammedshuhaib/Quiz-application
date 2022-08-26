@@ -2,16 +2,16 @@ import React from 'react'
 import './Qustions.scss'
 import { useSelector } from 'react-redux'
 function Questions() {
-  let {question} = useSelector((state) => state.quiz)
+  let {question,number} = useSelector((state) => state.quiz)
 
   return (
     
     <div className='questionContainer'>
         <div className="header">
-            <p>Question <span>1</span></p>
+            <p>Question <span>{number}</span></p>
         </div>
         <div className="body">
-            <p>{question[0].Question}</p>
+            <p>{question[number-1].Question}</p>
         </div>
     </div>
   )

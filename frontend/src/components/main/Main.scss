@@ -21,6 +21,7 @@
   .buttonContaier {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 10px;
 
     .prevButton,
@@ -42,5 +43,32 @@
       }
 
     }
+    
+    }
+    .helpButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px; 
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(202, 194, 194, 0.47);
+      width: 100px;
+      border-radius: 8px;
+      background:red;
+      cursor: pointer;
+
+      &:hover {
+        background:  rgb(126, 7, 7);
+      }
+       
+      p {
+        align-self: center;
+        margin-top: 4px;
+        justify-self: end;
+        color: white;
+       
+      }
   }
+
+  
 }

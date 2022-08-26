@@ -6,7 +6,7 @@ import Main from "../components/main/Main";
 import Pending from "../components/pending/Pending";
 import Questions from '../components/question/Questions'
 import{ toast } from 'react-toastify'
-import {data, reset} from '../features/dataSlice'
+import {data} from '../features/dataSlice'
 function Home() {
   const dispatch = useDispatch()
 
@@ -16,7 +16,9 @@ function Home() {
            dispatch(data())
           })()
 
-          console.log(question)
+          // if(isError) {
+          //   toast.error(message)
+          // }
     },[])
   return (
     <div>

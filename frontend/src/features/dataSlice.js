@@ -2,12 +2,15 @@ import { counterSlice, createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import quizService from './dataService'
 
 let question = JSON.stringify(localStorage.getItem('questions'))
+let number = localStorage.getItem('number')
 const initialState = {
     isError: false,
     isSuccess: false,
     isLoading: false,
     message:'',
-    question: question || null
+    question: question || null,
+    number: number || 1,
+    setExplanation:false
 }
 
 
@@ -26,11 +29,12 @@ export const quizSlice = createSlice ({
     name: 'quiz',
     initialState,
     reducers: {
-        reset: (state) => {
-            state.isLoading = false
-            state.isError = false
-            state.isSuccess = false
-            state.message = ''
+        Add: (state, action) => {
+            state.number = action.payload;
+            localStorage.setItem('number',action.payload)
+        },
+        showExplanation: (state, action) => {
+            state.setExplanation = action.payload;
         }
     },
     extraReducers: (builder) => {
@@ -51,5 +55,5 @@ export const quizSlice = createSlice ({
     }
 })
 
-export const {reset} = quizSlice.actions
+export const {Add,showExplanation} = quizSlice.actions
 export default quizSlice.reducer
